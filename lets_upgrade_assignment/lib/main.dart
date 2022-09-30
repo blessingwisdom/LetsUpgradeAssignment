@@ -9,45 +9,58 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: MyHomePage(),
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            children: [
-              Container(
-                height: 20.0,
-                margin: const EdgeInsets.all(8.0),
-                padding: const EdgeInsets.all(8.0),
-                child: TextFormField(
+      home: Scaffold(
+        body: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              children: [
+                Container(
+                  height: 60.0,
+                  margin: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(4.0),
+                  child: TextFormField(
                     decoration: const InputDecoration(
-                  hintText: "First Name",
-                  hintStyle: TextStyle(
-                    fontSize: 12.0,
-                    color: Colors.black87,
+                        hintText: "First Name",
+                        hintStyle: TextStyle(
+                            fontSize: 12.0,
+                            fontWeight: FontWeight.w400,
+                            color: Colors.black87),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(25.0)),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: Colors.grey))),
                   ),
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(20.0))),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Colors.grey,
-                    ),
+                ),
+                Container(
+                  height: 60.0,
+                  margin: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(4.0),
+                  child: TextFormField(
+                    decoration: const InputDecoration(
+                        hintText: "Last Name",
+                        hintStyle: TextStyle(
+                            fontSize: 12.0,
+                            fontWeight: FontWeight.w400,
+                            color: Colors.black87),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(25.0)),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: Colors.grey))),
                   ),
-                )),
-              ),
-            ],
+                ),
+                BottomNavigationBar(
+                  items: const [
+                    BottomNavigationBarItem(icon: Icon(Icons.home)),
+                    BottomNavigationBarItem(icon: Icon(Icons.message))
+                  ],
+                )
+              ],
+            ),
           ),
         ),
       ),
