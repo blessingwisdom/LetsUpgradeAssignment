@@ -32,14 +32,21 @@ class MyHomePage extends StatelessWidget {
                 margin: const EdgeInsets.all(8.0),
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
-                  decoration: const InputDecoration(
-                      hintText: "First Name",
-                      hintStyle: TextStyle(
-                        fontSize: 12.0,
-                        color: Colors.black87,
-                      )),
-                ),
-              )
+                    decoration: const InputDecoration(
+                  hintText: "First Name",
+                  hintStyle: TextStyle(
+                    fontSize: 12.0,
+                    color: Colors.black87,
+                  ),
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Colors.grey,
+                    ),
+                  ),
+                )),
+              ),
             ],
           ),
         ),
