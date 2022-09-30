@@ -12,6 +12,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        bottomNavigationBar: BottomNavigationBar(
+          items: const [
+            BottomNavigationBarItem(icon: Icon(Icons.favorite)),
+            BottomNavigationBarItem(icon: Icon(Icons.message)),
+            BottomNavigationBarItem(icon: Icon(Icons.home)),
+          ],
+        ),
         body: SafeArea(
           child: Padding(
             padding: const EdgeInsets.all(8.0),
@@ -53,12 +60,6 @@ class MyApp extends StatelessWidget {
                             borderSide: BorderSide(color: Colors.grey))),
                   ),
                 ),
-                BottomNavigationBar(
-                  items: const [
-                    BottomNavigationBarItem(icon: Icon(Icons.home)),
-                    BottomNavigationBarItem(icon: Icon(Icons.message))
-                  ],
-                )
               ],
             ),
           ),
