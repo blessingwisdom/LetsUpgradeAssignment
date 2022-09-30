@@ -14,9 +14,21 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         bottomNavigationBar: BottomNavigationBar(
           items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.favorite)),
-            BottomNavigationBarItem(icon: Icon(Icons.message)),
-            BottomNavigationBarItem(icon: Icon(Icons.home)),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.favorite),
+              label: 'Favorite',
+              backgroundColor: Colors.red,
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Home',
+              backgroundColor: Colors.blue,
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.message),
+              label: 'Message',
+              backgroundColor: Colors.blue,
+            ),
           ],
         ),
         body: SafeArea(
