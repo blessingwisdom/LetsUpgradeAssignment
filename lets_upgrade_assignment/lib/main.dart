@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        backgroundColor: Color.fromARGB(255, 197, 225, 240),
         bottomNavigationBar: BottomNavigationBar(
           items: const [
             BottomNavigationBarItem(
